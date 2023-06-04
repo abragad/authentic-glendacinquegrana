@@ -1,11 +1,17 @@
 /*
- * Theme Name:  Authentic Child
+ * Theme Name:  Glenda Cinquegrana 2023 Authentic Child
  * Theme URI:   https://codesupply.co/themes/authentic/
- * Description: Authentic Child Theme
- * Author:      Code Supply Co.
- * Author URI:  https://codesupply.co/
+ * Description: Theme for GlendaCinquegrana.com Authentic Child Theme
+ * Author:      Alessio Bragadini
+ * Author URI:  https://techartconsulting.it
  * Template:    authentic
- * Version:     1.0.0
+ * Version:     2023.1.0
  */
 
 /* Copy any classes from parent theme here. They will override the parent's version. */
+
+#bazinga {
+	display: none;
+}
+
+/* end */

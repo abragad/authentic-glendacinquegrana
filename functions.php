@@ -33,3 +33,22 @@ add_action( 'wp_enqueue_scripts', 'csco_child_assets', 99 );
  * Add your custom code below this comment.
  */
 
+/***** Add extra buttons on WooCommerce product page *****/
+
+function my_extra_button_on_product_page() {
+  global $product;
+  $slug = $product->get_slug();
+  $title = esc_attr( $product->get_title() );
+  echo '<a href="mailto:shop@glendacinquegrana.com?Subject=' . $title . '" class="single_add_to_cart_button button alt">contact&nbsp;us</a>&nbsp;';
+  if ( get_field( 'show_artsy_button' ) == 1 ) {
+        if ( empty ( get_field( 'artsy_url' ) ) ) {
+    echo '<a href="https://www.artsy.net/artwork/'. $slug . '" target="_blank" class="single_add_to_cart_button button alt">Buy Now on Artsy</a>';
+} else {
+    echo '<a href="'. get_field( 'artsy_url' ) . '" target="_blank" class="single_add_to_cart_button button alt">Buy Now on Artsy</a>';
+}
+  }
+}
+
+add_action( 'woocommerce_single_product_summary', 'my_extra_button_on_product_page', 30 );
+
+/** end **/
